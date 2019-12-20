@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="homePage">خانه</string>
+    <string name="name">نام</string>
+    <string name="description">توضیح</string>
+    <string name="time">ساعت</string>
+    <string name="date">تاریخ</string>
+    <string name="save">ذخیره</string>
+    <string name="messageText">متن پیامک</string>
+    <string name="receiverNumber">شماره دریافت کننده پیامک</string>
+    <string name="haveRepeat">تکرار داشته باشد</string>
+    <string name="repeatAfter">هر چند ساعت تکرار شود؟</string>
+    <string name="cancel">لغو</string>
+    <string name="removeReminder">آیا از حذف %s مطمئن هستید؟</string>
+    <string name="yes">بله</string>
+    <string name="no">خیر</string>
+    <string name="addReminder">اضافه کردن یادآور</string>
+    <string name="pleaseChooseATime">لطفا زمان یادآور را تنظیم کنید</string>
+    <string name="remindersList">لیست یادآورها</string>
+    <string name="addTime">زمان اولین اجرا</string>
+    <string name="nextRunTime">زمان اجرای بعدی</string>
+    <string name="expired">منقضی شده است</string>
+    <string name="remove">حذف</string>
+    <string name="reminder">یادآور</string>
+    <string name="sendSms">ارسال پیامک</string>
+    <string name="nameCantBeEmpty">نام نباید خالی باشد</string>
+    <string name="messageTextCantBeEmpty">متن پیام نباید خالی باشد</string>
+    <string name="receiverNumberCantBeEmpty">شماره گیرنده پیام نباید خالی باشد</string>
+    <string name="pleaseChooseANumber">لطفا یکی از شماره ها را انتخاب کنید</string>
+
+</resources>

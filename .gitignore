@@ -1,0 +1,81 @@
+/local.properties
+/.idea/workspace.xml
+/.idea/libraries
+/captures
+# Built application files
+/*/build/
+build/generated/
+build/generated/mockable-android-25.jar
+build/intermediates/
+# Crashlytics configuations
+com_crashlytics_export_strings.xml
+
+# Local configuration file (sdk path, etc)
+local.properties
+
+# Gradle generated files
+.gradle/
+
+# Signing files
+.signing/
+/buid/
+/buid/*
+
+# User-specific configurations
+.idea
+.idea/
+.idea/libraries/
+.idea/dictionaries/
+.idea/workspace.xml
+.idea/tasks.xml
+.idea/.name
+.idea/compiler.xml
+.idea/copyright/profiles_settings.xml
+.idea/encodings.xml
+.idea/misc.xml
+.idea/modules.xml
+.idea/scopes/scope_settings.xml
+.idea/vcs.xml
+*.iml
+
+
+
+
+
+# OS-specific files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+#built application files
+*.apk
+*.ap_
+
+# files for the dex VM
+*.dex
+
+# Java class files
+*.class
+
+# generated files
+bin/
+gen/
+
+
+# Eclipse project files
+.classpath
+.project
+
+#.idea/workspace.xml - remove # and delete .idea if it better suit your needs.
+.gradle
+
+/build/android-profile/
+/build/generated/
+/build/generated/mockable-android-25.jar
+/build/
+projectFilesBackup/
+/OtherAsset

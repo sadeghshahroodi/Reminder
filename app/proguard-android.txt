@@ -1,0 +1,245 @@
+# Add project specific ProGuard rules here.
+# By default, the flags in this file are appended to flags specified
+# in G:\adt-bundle-windows-x86_64-20140702\adt-bundle-windows-x86_64-20140702\sdk/tools/proguard/proguard-android.txt
+# You can edit the include path and order by changing the proguardFiles
+# directive in build.gradle.
+#
+# For more details, see
+#   http://developer.android.com/guide/developing/tools/proguard.html
+
+# Add any project specific keep options here:
+
+# If your project uses WebView with JS, uncomment the following
+# and specify the fully qualified class name to the JavaScript interface
+# class:
+#-keepclassmembers class fqcn.of.javascript.interface.for.webview {
+#   public *;
+#}
+-keep public class * implements com.bumptech.glide.module.GlideModule
+-keep public enum com.bumptech.glide.load.resource.bitmap.ImageHeaderParser$** {
+    **[] $VALUES;
+    public *;
+}
+-keep class com.crashlytics.** { *; }
+-keep class com.crashlytics.android.**
+-keepattributes SourceFile,LineNumberTable, *Annotation*
+-keep class com.tozny.crypto.android.AesCbcWithIntegrity$PrngFixes$* { *; }
+
+
+-ignorewarnings
+
+
+
+
+
+#-keep class android.support.v4.** { *; }
+#-keep interface android.support.v4.** { *; }
+#
+#-keep class android.support.v7.** { *; }
+#-keep interface android.support.v7.** { *; }
+
+-keep class com.j256.**
+-keepclassmembers class com.j256.** { *; }
+-keep enum com.j256.**
+-keepclassmembers enum com.j256.** { *; }
+-keep interface com.j256.**
+-keepclassmembers interface com.j256.** { *; }
+-keepattributes Signature
+-keepattributes *Annotation*
+
+
+-keepclassmembers enum * {
+    public static **[] value();
+    public static ** valueOf(java.lang.String);
+}
+
+
+
+
+-dontwarn com.squareup.okhttp.**
+
+
+-keepattributes SourceFile,LineNumberTable
+-dontwarn com.squareup.picasso.**
+-keepclasseswithmembernames class * {
+    native <methods>;
+}
+
+#-keep class com.niniplus.app.ui.component.RotatingDrawable.** { *; }
+#-keep class com.niniplus.app.ui.component.RotatingDrawable
+#-keepnames class com.niniplus.app.ui.component.RotatingDrawable
+#-keepnames class com.niniplus.app.ui.component.RotatingDrawable.**
+#-keep class com.niniplus.app.ui.component.FloatingActionsMenu.** { *; }
+#-keepnames class com.niniplus.app.ui.component.FloatingActionsMenu.**
+-keepclassmembers class com.niniplus.app.ui.component.FloatingActionsMenu$RotatingDrawable {
+   void set*(***);
+   *** get*();
+}
+
+
+-optimizationpasses 5
+-dontusemixedcaseclassnames
+-dontskipnonpubliclibraryclasses
+-dontpreverify
+-verbose
+-optimizations !code/simplification/arithmetic,!field/*,!class/merging/*
+#-keep public class * extends android.app.Activity
+#-keep public class * extends android.app.Application
+#-keep public class * extends android.app.Service
+#-keep public class * extends android.content.BroadcastReceiver
+#-keep public class * extends android.content.ContentProvider
+-keep public class com.android.vending.licensing.ILicensingService
+-keepclasseswithmembernames class * {
+    native <methods>;
+}
+-keepclasseswithmembernames class * {
+    public <init>(android.content.Context, android.util.AttributeSet);
+}
+-keepclasseswithmembernames class * {
+    public <init>(android.content.Context, android.util.AttributeSet, int);
+}
+-keepclassmembers enum * {
+    public static **[] values();
+    public static ** valueOf(java.lang.String);
+}
+-keep class * implements android.os.Parcelable {
+  public static final android.os.Parcelable$Creator *;
+}
+#ACRA specifics
+# Restore some Source file names and restore approximate line numbers in the stack traces,
+# otherwise the stack traces are pretty useless
+-keepattributes SourceFile,LineNumberTable
+
+# ACRA needs "annotations" so add this...
+# Note: This may already be defined in the default "proguard-android-optimize.txt"
+# file in the SDK. If it is, then you don't need to duplicate it. See your
+# "project.properties" file to get the path to the default "proguard-android-optimize.txt".
+-keepattributes *Annotation*
+
+-keep public class com.google.android.gms.gcm.GoogleCloudMessaging.** { *; }
+-dontwarn com.google.android.gms.gms.GoogleCloudMessaging.**
+-keepnames class com.google.android.gms.gms.GoogleCloudMessaging.**
+
+-dontwarn org.apache.http.**
+-dontwarn android.net.http.AndroidHttpClient
+-dontwarn com.google.android.gms.**
+-dontwarn com.android.volley.toolbox.**
+
+-dontwarn it.sephiroth.android.library.imagezoom.**
+-dontwarn github.chenupt.springindicator.**
+-dontwarn com.quinny898.library.persistentsearch.**
+-dontwarn com.orangegangsters.github.swipyrefreshlayout.**
+-dontwarn com.nineoldandroids.animation.**
+-keep class com.github.mikephil.charting.** { *; }
+-dontwarn io.realm.**
+-dontwarn org.jboss.netty.**
+-dontwarn jcifs.http.NtlmSsp.**
+-dontwarn jcifs.http.**
+-dontwarn javax.servlet.**
+-dontwarn jcifs.http.NetworkExplorer
+-keep,allowoptimization,allowobfuscation class eu.masconsult.android_ntlm.* {*;}
+
+
+-keep,includedescriptorclasses class com.package.YourClass$* { *; }
+-keepattributes Signature,InnerClasses,*Annotation*
+-keep,includedescriptorclasses  class org.glassfish.tyrus.** {  *; }
+-keep,includedescriptorclasses  class org.glassfish.grizzly.** { *; }
+-keep,includedescriptorclasses  class javax.websocket.** { *; }
+
+-keep class com.fasterxml.jackson.** { *; }
+-keepnames class com.fasterxml.jackson.** { *; }
+-keep class com.fasterxml.jackson.* { *; }
+-keepnames class com.fasterxml.jackson.* { *; }
+-keep class com.fasterxml.jackson.databind.ObjectMapper.** { *; }
+-keep class com.fasterxml.jackson.databind.ObjectMapper.** {
+    public <methods>;
+    protected <methods>;
+}
+-keep class com.fasterxml.jackson.databind.ObjectWriter.** { *; }
+-keep class com.fasterxml.jackson.databind.ObjectWriter.** {
+    public ** writeValueAsString(**);
+}
+
+-dontskipnonpubliclibraryclassmembers
+
+-keepattributes *Annotation*,EnclosingMethod
+
+-dontwarn javax.xml.**
+-dontwarn javax.xml.stream.events.**
+-dontwarn com.fasterxml.jackson.**
+-keepnames class com.fasterxml.jackson.** { *; }
+-dontwarn com.fasterxml.jackson.databind.**
+
+-keep class com.ninipluscore.model.** { *; }
+-keep class com.niniplus.app.models.** { *; }
+
+-keep public class * implements com.bumptech.glide.module.GlideModule
+-keep public class * extends com.bumptech.glide.AppGlideModule
+#-keep public class * extends android.graphics.drawable.LayerDrawable
+-keep public enum com.bumptech.glide.load.resource.bitmap.ImageHeaderParser$** {
+  **[] $VALUES;
+  public *;
+}
+
+-keep public class * extends com.bumptech.glide.module.AppGlideModule
+-keep public enum com.bumptech.glide.load.ImageHeaderParser$** {
+  **[] $VALUES;
+  public *;
+}
+
+# for DexGuard only
+#-keepresourcexmlelements manifest/application/meta-data@value=GlideModule
+
+-keep class com.lsjwzh.widget.recyclerviewpager.**
+-dontwarn com.lsjwzh.widget.recyclerviewpager.**
+
+# -keepclasseswithmembernames,includedescriptorclasses class* {
+#     native <methods>;
+# }
+ -keep class com.google.android.exoplayer.** {*;}
+
+# start of AppSee
+-keep class com.appsee.** { *; }
+-dontwarn com.appsee.**
+-keep class android.support.** { *; }
+-keep interface android.support.** { *; }
+-keep class androidx.** { *; }
+-keep interface androidx.** { *; }
+-keepattributes SourceFile,LineNumberTable
+# end of AppSee
+# start of uxcam
+-keep class com.uxcam.** { *; }
+-dontwarn com.uxcam.**
+# end of uxcam
+# start of account kit
+-keep class com.facebook.FacebookSdk {
+   boolean isInitialized();
+}
+-keep class com.facebook.appevents.AppEventsLogger {
+   com.facebook.appevents.AppEventsLogger newLogger(android.content.Context);
+   void logSdkEvent(java.lang.String, java.lang.Double, android.os.Bundle);
+}
+# end of account kit
+
+
+# rxjava
+-keep class rx.schedulers.Schedulers {
+    public static <methods>;
+}
+-keep class rx.schedulers.ImmediateScheduler {
+    public <methods>;
+}
+-keep class rx.schedulers.TestScheduler {
+    public <methods>;
+}
+-keep class rx.schedulers.Schedulers {
+    public static ** test();
+}
+-keepclassmembers class rx.internal.util.unsafe.*ArrayQueue*Field* {
+    long producerIndex;
+    long consumerIndex;
+}
+-keepclassmembers class rx.internal.util.unsafe.BaseLinkedQueueProducerNodeRef {
+    long producerNode;
+    long consumerNode;
+}

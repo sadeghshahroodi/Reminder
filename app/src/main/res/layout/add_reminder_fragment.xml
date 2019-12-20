@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/lightGray"
+    android:orientation="vertical"
+    android:padding="10dp"
+    tools:context=".frg.AddReminderFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/lightGray"
+        android:orientation="vertical"
+        android:padding="10dp"
+        tools:context=".frg.AddReminderFragment">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/reminder_item_background"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <com.sadegh.reminder.ui.CustomTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/name" />
+
+            <com.sadegh.reminder.ui.CustomEditText
+                android:id="@+id/etName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:hint="@string/name" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/reminder_item_background"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <com.sadegh.reminder.ui.CustomTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/description" />
+
+            <com.sadegh.reminder.ui.CustomEditText
+                android:id="@+id/etDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/description" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/msgInfoContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/reminder_item_background"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <com.sadegh.reminder.ui.CustomTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/messageText" />
+
+                <com.sadegh.reminder.ui.CustomEditText
+                    android:id="@+id/etMessageText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/messageText" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/reminder_item_background"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <com.sadegh.reminder.ui.CustomTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/receiverNumber" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+                    <ImageView
+                        android:id="@+id/ivChooseContact"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/plus"
+                        android:tint="@color/black"/>
+                <com.sadegh.reminder.ui.CustomEditText
+                    android:id="@+id/etMessageReceiver"
+                    android:inputType="phone"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/receiverNumber" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:animateLayoutChanges="true"
+            android:background="@drawable/reminder_item_background"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <com.sadegh.reminder.ui.CustomSwitch
+                android:id="@+id/swRepeat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/haveRepeat"
+                android:textColor="@color/black" />
+
+            <LinearLayout
+                android:id="@+id/repeatContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <com.sadegh.reminder.ui.CustomEditText
+                    android:id="@+id/repeatMinute"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="numberDecimal"
+                    android:gravity="center"
+                    android:minWidth="50dp" />
+
+                <com.sadegh.reminder.ui.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/repeatAfter" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        <com.sadegh.reminder.ui.CustomButton
+            android:id="@+id/btnTime"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/btn_click_bg"
+            android:padding="10dp"
+            android:text="@string/time" />
+        <com.sadegh.reminder.ui.CustomButton
+            android:id="@+id/btnDate"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/btn_click_bg"
+            android:padding="10dp"
+            android:text="@string/date" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <com.sadegh.reminder.ui.CustomButton
+                android:id="@+id/btnCancel"
+                android:textColor="#f00"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/btn_click_bg"
+                android:padding="10dp"
+                android:text="@string/cancel" />
+
+            <com.sadegh.reminder.ui.CustomButton
+                android:id="@+id/btnSave"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/btn_click_bg"
+                android:textColor="#08B608"
+                android:padding="10dp"
+                android:text="@string/save" />
+
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

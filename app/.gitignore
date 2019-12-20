@@ -1,0 +1,17 @@
+/build
+*.iml
+*.iws
+*.ipr
+.idea/
+.gradle/
+local.properties
+
+*/build/
+/buid/
+/buid/*
+*/.externalNativeBuild/
+/TMessagesProj/.externalNativeBuild/
+
+*~
+*.swp
+*.jks

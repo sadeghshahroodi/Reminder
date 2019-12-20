@@ -1,0 +1,29 @@
+<resources>
+    <string name="homePage">Home</string>
+    <string name="name">Name</string>
+    <string name="description">Description</string>
+    <string name="time">Time</string>
+    <string name="date">Date</string>
+    <string name="save">Save</string>
+    <string name="messageText">Message text</string>
+    <string name="receiverNumber">Receiver phone number</string>
+    <string name="haveRepeat">Have repeat</string>
+    <string name="repeatAfter">Repeat every few hours?</string>
+    <string name="cancel">Cancel</string>
+    <string name="removeReminder">Are you sure about removing %s</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="addReminder">Add reminder</string>
+    <string name="pleaseChooseATime">Please set the reminder time</string>
+    <string name="remindersList">Reminders list</string>
+    <string name="addTime">First running time</string>
+    <string name="nextRunTime">Next running time</string>
+    <string name="expired">Expired</string>
+    <string name="remove">Remove</string>
+    <string name="reminder">Reminder</string>
+    <string name="sendSms">Send message</string>
+    <string name="nameCantBeEmpty">Name can not be empty</string>
+    <string name="messageTextCantBeEmpty">MessageTextCantBeEmpty</string>
+    <string name="receiverNumberCantBeEmpty">Receiver number can not be empty</string>
+    <string name="pleaseChooseANumber">Please choose a number</string>
+</resources>
